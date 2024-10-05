@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.color {
+    color: #051923;
+}
+
+body {
+    background-color: #ced4da;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Utilities */
+
+.gradienHabibi {
+    background-image: linear-gradient(to right, #e4ecfc 0%, #e4f3fc 100%);
+}
+
+p {
+    font-weight: 700;
+}
+
+/* Container */
+
+.container {
+    width: 800px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 2px 0px 16px;
+}
+
+
+.register {
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.line {
+    width: 40px;
+    height: 3px;
+}
+
+.firstForm {
+    margin: 30px 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.registration {
+    height: 50px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.details {
+    width: 47%;
+    margin: 10px 0;
+}
+
+.details input {
+    margin: 10px 0;
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+.chkon-nta {
+    display: none;
+}
+
+.inputs label {
+    margin-right: 120px;
+    display: flex;
+    cursor: pointer;
+}
+
+.inputs {
+    margin: 30px 0;
+    display: flex;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button[name="tbSubmit"],
+a.btn-back {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+button[name="tbSubmit"] {
+    background-color: #0D6EFD; /* Warna biru */
+    color: white;
+    margin-left: auto; /* Meletakkan tombol di pojok kanan */
+}
+
+a.btn-back {
+    background-color: #9d9d9d; /* Warna abu-abu */
+    color: white;
+    margin-right: auto; /* Meletakkan tombol di pojok kiri */
+}
+
+button[name="tbSubmit"]:hover {
+    background-color: #0c50b7; /* Warna biru saat hover */
+}
+
+a.btn-back:hover {
+    background-color: #808080; /* Warna biru saat hover */
+}
+
+/* Tambahkan gaya untuk pesan kesalahan */
+.text-danger {
+    color: #dc3545; /* Warna merah untuk pesan kesalahan */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Gaya untuk pesan berhasil */
+.text-success {
+    color: #28a745; /* Warna hijau untuk pesan berhasil */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    body {
+        height: 100%;
+        width: 100vw;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .register {
+        align-items: center;
+    }
+    
+    .line {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        width: 200px;
+    }
+
+    .firstForm {
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .secondForm {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .details {
+        width: 100%;
+        margin: 0;
+    }
+
+    .button {
+        width: 50%;
+    }
+
+    .inputs label {
+        margin-bottom: 10px;
+    
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+}

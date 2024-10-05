@@ -1,0 +1,29 @@
+runtime: php81
+
+handlers:
+  # Serve static files from the "css" directory.
+  - url: /css
+    static_dir: css
+
+  # Serve static files from the "images" directory.
+  - url: /images
+    static_dir: images
+
+  # Serve static images (gif, png, jpg) directly.
+  - url: /(.+\.(gif|png|jpg))$
+    static_files: \1
+    upload: .+\.(gif|png|jpg)$
+
+  # Handle the /login.php request specifically.
+  - url: /login.php
+    script: login.php
+
+  # Handle all PHP files that don't have specific handlers above.
+  - url: /(.+\.php)$
+    script: \1
+
+  # Default handler for all other requests.
+  - url: /.*
+    script: auto
+
+entrypoint: serve handler.php
